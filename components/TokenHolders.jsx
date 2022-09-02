@@ -7,9 +7,9 @@ export default function TokenHolders() {
   const [loading, setLoading] = useState(true);
   const [holders, setHolders] = useState([]);
   async function checkHolders() {
-    const sdk = new ThirdwebSDK("mumbai"); // configure this to your network
+    const sdk = new ThirdwebSDK("mainnet"); // configure this to your network
 
-    const token = sdk.getToken("0xCFbB61aF7f8F39dc946086c378D8cd997C72e2F3");
+    const token = sdk.getToken("0xE50A259592D3BaBbA4d874Ca3EA87E88BC8b086F");
 
     const balances = await token.history.getAllHolderBalances();
     setHolders(balances);
